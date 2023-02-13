@@ -39,6 +39,23 @@ export function createElement(type, props, ...children) {
 }
 /* -------------------------------------------------------------------------- */
 
+export function createElement(type, props, ...children) {
+  const element = document.createElement(type);
+  for (const [property, value] of Object.entries(props)) {
+    element.setAttribute(property, value);
+  }
+
+  if (children.length > 0) {
+    children.forEach(child => {
+      element.append(child);
+    });
+  }
+
+  return element;
+}
+
+/* -------------------------------------------------------------------------- */
+
 export let state = {
   headline: '웹브라우저 환경에서 React 라이브러리 시작하기',
   description:
@@ -79,8 +96,6 @@ export function render(state) {
   rootElement.append(container);
 }
 
-render(state);
-
 export function update(newState) {
 
   if (typeof newState.subjects === 'string') {
@@ -99,3 +114,4 @@ export function update(newState) {
 
   render(state);
 }
+
