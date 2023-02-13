@@ -22,6 +22,21 @@
 //   `;
 // }
 
+/* ------------------------------------ - ----------------------------------- */
+export function createElement(type, props, ...children) {
+  const element = document.createElement(type);
+  for (const [property, value] of Object.entries(props)) {
+    element.setAttribute(property, value);
+  }
+
+  if (children.length > 0) {
+    children.forEach(child => {
+      element.append(child);
+    });
+  }
+
+  return element;
+}
 /* -------------------------------------------------------------------------- */
 
 let state = {
