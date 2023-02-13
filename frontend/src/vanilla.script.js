@@ -99,5 +99,3 @@ export function update(newState) {
 
   render(state);
 }
-
-globalThis.update = update;
