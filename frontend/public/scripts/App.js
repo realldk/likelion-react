@@ -15,7 +15,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 import LogIn from './pages/LogIn.js';
 import Browse from './pages/Browse.js';
 import Home from './pages/Home.js';
-import likeLionMembers from './data/likeLionMembers.js';
+// import likeLionMembers from './data/likeLionMembers.js';
 var App = /*#__PURE__*/function (_React$Component) {
   _inherits(App, _React$Component);
   var _super = _createSuper(App);
@@ -69,9 +69,7 @@ var App = /*#__PURE__*/function (_React$Component) {
           role: "alert"
         }, hasError.message);
       }
-      return /*#__PURE__*/React.createElement(Home, {
-        likeLionMembers: likeLionMembers
-      });
+      return /*#__PURE__*/React.createElement(Home, null);
       return /*#__PURE__*/React.createElement("div", {
         className: "App"
       }, /*#__PURE__*/React.createElement("h1", null, headline), /*#__PURE__*/React.createElement("button", {
