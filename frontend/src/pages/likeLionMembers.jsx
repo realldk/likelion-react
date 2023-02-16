@@ -1,4 +1,4 @@
-import likeLionMembers from '../data/likeLionMembers.js'
+import {likeLionMembers} from '../data/likeLionMembers.js'
 
 class likeLionMembers extends React.Component {
   state = {
