@@ -374,17 +374,17 @@ var likeLionMembers = [{
   name: '이경주',
   gender: '여성'
 }, {
-  id: 'likelion__4_8-08',
+  id: 'likelion__4_8-09',
   lab: 8,
   name: '변경섭',
   gender: '남성'
 }, {
-  id: 'likelion__4_8-09',
+  id: 'likelion__4_8-10',
   lab: 8,
   name: '정선희',
   gender: '여성'
 }, {
-  id: 'likelion__4_8-10',
+  id: 'likelion__4_8-11',
   lab: 8,
   name: '문나래',
   gender: '여성'
@@ -524,3 +524,4 @@ var likeLionMembers = [{
   name: '홍자영',
   gender: '여성'
 }];
+export default likeLionMembers;

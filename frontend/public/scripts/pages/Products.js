@@ -12,7 +12,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-import likeLionMembers from '../data/likeLionMembers.js';
 var Home = /*#__PURE__*/function (_React$Component) {
   _inherits(Home, _React$Component);
   var _super = _createSuper(Home);
@@ -24,22 +23,42 @@ var Home = /*#__PURE__*/function (_React$Component) {
     }
     _this = _super.call.apply(_super, [this].concat(args));
     _defineProperty(_assertThisInitialized(_this), "state", {
-      member: likeLionMembers
+      products: [{
+        id: 'product-dkfj',
+        name: '웰치스',
+        price: 980,
+        image: 'https://img.danawa.com/prod_img/500000/648/889/img/16889648_1.jpg?shrink=500:500&_v=20221021170923'
+      }, {
+        id: 'product-ekdi',
+        name: '두부 1kg',
+        price: 2180,
+        image: 'https://contents.lotteon.com/itemimage/_v105312/LF/14/37/17/3_/0/LF1437173_0_2.jpg/dims/resizef/720X720'
+      }]
     });
     return _this;
   }
   _createClass(Home, [{
     key: "render",
     value: function render() {
-      var member = this.state.member;
-      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h2", null, "\uBA4B\uC0AC 4\uAE30 \uBA64\uBC84\uB4E4"), /*#__PURE__*/React.createElement("ul", null, member.map(function (_ref) {
+      var products = this.state.products;
+      var figcaptionStyle = {
+        display: 'flex',
+        gap: 12
+      };
+      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h2", null, "\uB9AC\uC2A4\uD2B8 \uB80C\uB354\uB9C1"), /*#__PURE__*/React.createElement("ul", null, products.map(function (_ref) {
         var id = _ref.id,
-          lab = _ref.lab,
           name = _ref.name,
-          gender = _ref.gender;
+          price = _ref.price,
+          image = _ref.image;
         return /*#__PURE__*/React.createElement("li", {
           key: id
-        }, /*#__PURE__*/React.createElement("span", null, "LAB ", lab, " - "), /*#__PURE__*/React.createElement("span", null, name), /*#__PURE__*/React.createElement("span", null, "(", gender, ")"));
+        }, /*#__PURE__*/React.createElement("figure", null, /*#__PURE__*/React.createElement("img", {
+          src: image,
+          height: 100,
+          alt: ""
+        }), /*#__PURE__*/React.createElement("figcaption", {
+          style: figcaptionStyle
+        }, /*#__PURE__*/React.createElement("span", null, name), /*#__PURE__*/React.createElement("span", null, price))));
       })));
     }
   }]);

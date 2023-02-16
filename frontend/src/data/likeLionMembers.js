@@ -74,9 +74,9 @@ const likeLionMembers = [
   { id: 'likelion__4_8-05', lab: 8, name: '김진섭', gender: '남성' },
   { id: 'likelion__4_8-06', lab: 8, name: '소정', gender: '여성' },
   { id: 'likelion__4_8-08', lab: 8, name: '이경주', gender: '여성' },
-  { id: 'likelion__4_8-08', lab: 8, name: '변경섭', gender: '남성' },
-  { id: 'likelion__4_8-09', lab: 8, name: '정선희', gender: '여성' },
-  { id: 'likelion__4_8-10', lab: 8, name: '문나래', gender: '여성' },
+  { id: 'likelion__4_8-09', lab: 8, name: '변경섭', gender: '남성' },
+  { id: 'likelion__4_8-10', lab: 8, name: '정선희', gender: '여성' },
+  { id: 'likelion__4_8-11', lab: 8, name: '문나래', gender: '여성' },
   { id: 'likelion__4_9-01', lab: 9, name: '최예송', gender: '여성' },
   { id: 'likelion__4_9-02', lab: 9, name: '박세은', gender: '여성' },
   { id: 'likelion__4_9-03', lab: 9, name: '김동률', gender: '남성' },
@@ -105,3 +105,5 @@ const likeLionMembers = [
   { id: 'likelion__4_11-08', lab: 11, name: '정보화', gender: '여성' },
   { id: 'likelion__4_11-09', lab: 11, name: '홍자영', gender: '여성' },
 ];
+
+export default likeLionMembers;
