@@ -9,6 +9,7 @@ import App from './app/App';
 import reportWebVitals from './reportWebVitals';
 
 const root = createRoot(document.getElementById('root'));
+// mount -> unmountain -> mount
 root.render(
   <StrictMode>
     <App />

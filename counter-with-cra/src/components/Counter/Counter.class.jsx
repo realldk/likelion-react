@@ -1,6 +1,7 @@
 import { Component } from 'react';
+import './Counter.module.css';
 
-class Counter extends Component {
+class CounterClass extends Component {
 
   static defaultProps = {
     count: 1,
@@ -17,7 +18,7 @@ class Counter extends Component {
     const { count } = this.state;
 
     return (
-      <div data-component="Counter">
+      <div className="Counter">
         <button type="button" onClick={this.handleInc} aria-label="카운트 1 증가">
           +
         </button>
@@ -43,4 +44,4 @@ class Counter extends Component {
   }
 }
 
-export default Counter;
+export default CounterClass;
