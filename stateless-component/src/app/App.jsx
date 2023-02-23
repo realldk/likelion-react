@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classes from './App.module.css';
-import { Button, A11yHidden, Nav } from '../index';
+import { Button, A11yHidden, Nav } from '@/components';
 
 function App() {
   const [navList] = useState([
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className={classes.container}>
-      {/* <SkipToContent /> */}
+      <SkipToContent to="#snack"></SkipToContent>
       <Nav as="h3" headline="상품 목록" list={navList} />
       <h2 className={classes.headline}>Button 컴포넌트(stateless)</h2>
       <div role="group" className={classes.buttonGroup}>
