@@ -20,7 +20,7 @@ export const A11yHidden = ({
 
   // 변수(문자 값) + ' ' + 변수(문자 값)
   // `${개발자의 클래스이름} ${사용자의 클래스이름}`
-  let combinedClass = `${className} ${classes.srOnly}`.trim(); //trim으로 공백을 없애준다.
+  let combinedClass = `${className} ${focusable ? classes.focusable : ''} ${classes.srOnly}`.trim(); //trim으로 공백을 없애준다.
   return <Component className={combinedClass} {...restProps} />;
 };
 
