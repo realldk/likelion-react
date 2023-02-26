@@ -41,15 +41,13 @@ export function SkipToContent({ to, ...restProps }) {
 
   // React 요소 ({ref, key, props, type}) → ReactDOM 렌더링 → 실제 DOM
   return (
-    <>
-      <A11yHidden
-        ref={skipToContentRef}
-        as="a"
-        focusable
-        href={to}
-        // onClick={handleJumpToArea}
-        {...restProps}
-      />
-    </>
+    <A11yHidden
+      ref={skipToContentRef}
+      as="a"
+      focusable
+      href={to}
+      // onClick={handleJumpToArea}
+      {...restProps}
+    />
   );
 }
