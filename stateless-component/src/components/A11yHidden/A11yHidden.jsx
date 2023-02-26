@@ -30,3 +30,5 @@ export const A11yHidden = forwardRef(function A11yHidden({
 // A11yHidden.defaultProps = {
 //   as: 'span',
 // }
+
+export const srOnlyClassName = classes.srOnly;
