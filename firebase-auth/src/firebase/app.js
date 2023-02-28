@@ -20,4 +20,8 @@ const firebaseConfig = {
 
 console.log(firebaseConfig);
 
+// Firebase App (Back-End as a Service / 최근엔 Cloud Service라고 부름)
+// = Auth
+// = Database
+// = Storage
 export const app = initializeApp(firebaseConfig);
