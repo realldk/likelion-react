@@ -1,8 +1,9 @@
 import { useRef /* useState */ } from 'react';
-import { BaseLayout, FormInput, Button } from '@/components';
+import { BaseLayout, FormInput, Button, Notification } from '@/components';
 import classes from './SignUp.module.scss';
 import { useDocumentTitle } from '@/hooks/useDocumentTitle';
 import { createAuthUser } from '@/firebase/auth';
+import { useToggle } from '@/hooks/useToggle';
 // import { EventSubUnsub } from '@/demo/EventSubUnsub';
 // import { validator } from '@/utils';
 
@@ -25,7 +26,7 @@ export default function SignUp() {
   useDocumentTitle('회원가입 → Likelion 4th');
 
 
-
+  const { toggle, onToggle, offToggle } = useToggle();
   const formStateRef = useRef(initialFormState);
 
   const handleReset = (e) => {

@@ -12,3 +12,4 @@ export * from './HomeLink/HomeLink';
 export * from './FormInput/FormInput';
 export * from './A11yHidden/A11yHidden';
 export * from './SkipToContent/SkipToContent';
+export * from './Notification/Notification';
