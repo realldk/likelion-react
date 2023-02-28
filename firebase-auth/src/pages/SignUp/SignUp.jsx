@@ -1,9 +1,8 @@
 import { useRef /* useState */ } from 'react';
-import { auth } from '@/firebase/auth';
 import { BaseLayout, FormInput, Button } from '@/components';
 import classes from './SignUp.module.scss';
 import { useDocumentTitle } from '@/hooks/useDocumentTitle';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createAuthUser } from '@/firebase/auth';
 // import { EventSubUnsub } from '@/demo/EventSubUnsub';
 // import { validator } from '@/utils';
 
@@ -39,20 +38,14 @@ export default function SignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const { email, password } = formStateRef.current;
     // 유효성 검사 해야되는데
+
     // console.log(formStateRef.current);
 
-    const { email, password } = formStateRef.current;
 
-    try {
-      // console.log('회원가입 시도 → Firebase Authentication');
-      // 회원가입기능 (Firebase Auth 요청)
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      console.log(userCredential.user);
-    } catch ({ code, message }) {
-      console.error({ errorCode: code, errorMessage: message });
-    }
-
+    const { user } = await createAuthUser(email, password);
+    console.log(user);
   };
 
   const handleChangeInput = (e) => {
